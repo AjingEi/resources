@@ -35,3 +35,4 @@ var sortColors = function(nums) {
     return nums
 };
 ```
+解法三： 循环列表，计算所有的0有多少，所有的1有多少，所有的2有多少，再按数量顺序都放进数组。
