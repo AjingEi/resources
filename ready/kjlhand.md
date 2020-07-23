@@ -334,3 +334,103 @@ function (head){
     return res
 }
 ```
+前序遍历
+```
+funtion preorderTraversal(root) {
+    let arr = []
+    function tarver(root){
+        if(root === null){
+            return 
+        }
+        arr.push(root.val)
+        tarver(root.left)
+        tarver(root.right)
+    }
+}
+funtion preorderTraversal(root) {
+    let queue = [],res = [];
+    queue.push(root)
+    while(queue.length){
+        let item = queue.pop()
+        res.push(item.val)
+        if(node.right)  queue.push(item.right)
+        if(node.left)  queue.push(item.left)
+    }
+}
+
+
+
+funtion preorderTraversal(root) {
+    let arr = []
+    function tarver(root){
+        if(root === null){
+            return 
+        }
+        tarver(root.left)
+        arr.push(root.val)
+        tarver(root.right)
+    }
+}
+funtion preorderTraversal(root) {
+    let arr = []
+    function tarver(root){
+        if(root === null){
+            return 
+        }
+        tarver(root.left)
+        tarver(root.right)
+         arr.push(root.val)
+    }
+}
+```
+
+二叉树深度计算
+```
+最大深度
+function finddeep(root){
+    if(root === null) return 0
+    return Math.max(finddeep(root.left)+1, finddeep(root.right)+1)
+}
+
+function deep(root){
+    let queue = [];
+    let res = [];
+    let level = 0;
+    queue.push(root)
+    while(queue.length){
+        res.push([])
+        let size = queue.length
+        whilr(size--){
+            let item = queue.shift()
+            if(item.left) res[level].push(item.left)
+            if(item.right) res[level].push(item.right)
+        }
+        level++
+    }
+    return level
+}
+
+最小深度
+function mindeep(root){
+    if(root === null) return 0
+    if(root.left)
+}
+```
+镜像二叉树判断
+```
+function isSame(root){
+    istwoSame(root, root)
+}
+function istwoSame(left, right){
+    if(!left && !right){
+        return true
+    }
+    if(!left || !right){
+        return false
+    }
+    if(left.val !== right.val){
+        return false
+    }
+    return istwoSame(left.left, left.right) && istwoSame(right.left, right.right)
+}
+```
