@@ -214,6 +214,7 @@ function promiseAll(promises) {
 - 私有变量的实现
 ```
 function myVal (val){
+  let val = val
     return {
         set:function (newval) {
             val = newval
@@ -226,7 +227,7 @@ function myVal (val){
 
 var obj = myval(1)
 
-obj.set()
+obj.set(2)
 obj.get()
 ```
 - fill函数，用递归的方式
